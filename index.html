@@ -11,29 +11,37 @@
   <title>Frontend Mentor | Browser extensions manager UI</title>
 </head>
 
-<body class="font-Noto bg-dark-gradient dark:bg-light-gradient min-h-screen w-full flex flex-col p-4" class="">
+<body class="font-Noto bg-dark-gradient dark:bg-light-gradient min-h-screen w-full flex flex-col p-4 lg:p-20" class="">
   <header class="flex justify-between items-center bg-neutral800 dark:bg-neutral0 p-2 rounded-lg">
     <img src="./assets/images/logo-dark.svg" alt="logo-icon" class="" id="logo" />
     <div class="bg-neutral-700 dark:bg-neutral-200 flex items-center justify-center p-2 rounded-lg" id="darkMode">
-      <img src="./assets/images/icon-sun.svg" />
+      <img src="./assets/images/icon-sun.svg" id="image"/>
     </div>
   </header>
   <main class="my-10 flex flex-col items-center">
-    <h1 class="text-center text-neutral0 dark:text-neutral900 text-3xl font-bold">Extensions List</h1>
-    <ul class="flex my-7 text-neutral0 dark:text-neutral800 w-full items-center justify-around">
-      <li
-        class="border border-neutral700 dark:border-neutral100 bg-neutral700 dark:bg-neutral0 py-3 px-6 rounded-r-4xl rounded-l-4xl">
-        All
-      </li>
-      <li
-        class="border border-neutral700 dark:border-neutral100 bg-neutral700 dark:bg-neutral0 py-3 px-6 rounded-r-4xl rounded-l-4xl">
-        Active</li>
-      <li
-        class="border border-neutral700 dark:border-neutral100 bg-neutral700 dark:bg-neutral0 py-3 px-6 rounded-r-4xl rounded-l-4xl">
-        Inactive</li>
-    </ul>
-    <section id="extension-list">
-     
+    <div class="md:flex md:justify-between md:items-center md:w-[100%]">
+      <h1 class="max-md:text-center text-neutral0 dark:text-neutral900 text-3xl md:text-2xl font-bold">Extensions List
+      </h1>
+      <ul
+        class="flex md:my-4 gap-5 text-neutral0 dark:text-neutral800 items-center max-md:justify-center"
+        id="filter-btn">
+        <li
+          class="border border-neutral700 dark:border-neutral100 bg-neutral700 dark:bg-neutral0 py-3 px-6 rounded-r-4xl rounded-l-4xl buttons"
+          id="all">
+          All
+        </li>
+        <li
+          class="border border-neutral700 dark:border-neutral100 bg-neutral700 dark:bg-neutral0 py-3 px-6 rounded-r-4xl rounded-l-4xl buttons"
+          id="active">
+          Active</li>
+        <li
+          class="border border-neutral700 dark:border-neutral100 bg-neutral700 dark:bg-neutral0 py-3 px-6 rounded-r-4xl rounded-l-4xl buttons"
+          id="Inactive">
+          Inactive</li>
+      </ul>
+    </div>
+    <section id="extension-list" class="sm:grid xl:grid-cols-3 sm:grid-cols-2 sm:gap-2 lg:gap-4">
+
     </section>
   </main>
   <script src="./script.js"></script>
