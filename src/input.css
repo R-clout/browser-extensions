@@ -2,6 +2,10 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+*{
+  @apply transition-colors duration-100
+}
+
 @theme {
   --font-Noto: "Noto-Sans", sans-serif;
 

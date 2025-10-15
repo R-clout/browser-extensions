@@ -4,22 +4,23 @@ const filterBtns = document.querySelectorAll('.buttons');
 const darkbutton = document.getElementById('darkMode');
 
 
-darkbutton.addEventListener("click", () => {
-    document.documentElement.classList.toggle("dark");
-    if(document.documentElement.classList.contains("dark")){
-        document.getElementById("logo").src = './assets/images/logo.svg';
-        document.getElementById("image").src = './assets/images/icon-moon.svg'
-  } else {
-        document.getElementById("logo").src = './assets/images/logo-dark.svg';
-        document.getElementById("image").src = './assets/images/icon-sun.svg'
-  }
-})
-
-
-
-
 let extensionsData = [];
 let currentFilter = 'all';
+
+
+darkbutton.addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark");
+    const logo = document.getElementById("logo");
+    const image = document.getElementById("image");
+    if(document.documentElement.classList.contains("dark")){
+        if (logo) logo.src = './assets/images/logo.svg';
+        if (image) image.src = './assets/images/icon-moon.svg';
+    } else {
+        if (logo) logo.src = './assets/images/logo-dark.svg';
+        if (image) image.src = './assets/images/icon-sun.svg';
+    }
+})
+
 
 async function fetchExtensions(){
     const response = await fetch('data.json');
